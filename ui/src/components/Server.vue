@@ -14,13 +14,15 @@
                                     disabled
                             />
                             <v-text-field
-                                    v-model="server.listenPort"
+                                    v-model="server.listenUdpPort"
                                     type="number"
-                                    :rules="[
-                          v => !!v || 'Listen port is required',
-                        ]"
-                                    label="Listen port"
-                                    required
+                                    label="Listen udp port(default)"
+                                    
+                            />
+                            <v-text-field
+                                    v-model="server.listenTcpPort"
+                                    type="number"
+                                    label="Listen tcp port"
                             />
                             <v-combobox
                                     v-model="server.address"
